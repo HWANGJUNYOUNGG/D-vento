@@ -1,0 +1,57 @@
+﻿@model MvcMovie.Models.Sell
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>삭제하시겠습니까?</h3>
+<div>
+    <h4>Sell</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.s_code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.s_code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.s_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.s_name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.SellDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.SellDate)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.s_amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.s_amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Price)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Price)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Rating)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Rating)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="s_code" />
+        <input type="submit" value="삭제" class="btn btn-danger" />
+        <a class="btn btn-warning" asp-controller="Products" asp-action="Index">취소</a>
+    </form>
+</div>

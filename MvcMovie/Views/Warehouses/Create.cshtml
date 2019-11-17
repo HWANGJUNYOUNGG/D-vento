@@ -1,0 +1,46 @@
+﻿@model MvcMovie.Models.Warehouse
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Warehouse</h4>
+<hr />
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <form class="form-horizontal" method="post" asp-controller="Products" asp-action="Create">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="form-group">
+                <label>재고코드</label>
+                <input type="text" class="form-control" asp-for="w_code" placeholder="재고코드  입력" />
+                <span class="text-danger" asp-validation-for="w_code"></span>
+            </div>
+            <div class="form-group">
+                <label>재고명</label>
+                <input type="text" class="form-control" asp-for="w_name" placeholder="재고명  입력" />
+                <span class="text-danger" asp-validation-for="w_name"></span>
+            </div>
+            <div class="form-group">
+                <label>수량</label>
+                <input type="text" class="form-control" asp-for="w_amount" placeholder="수량  입력" />
+                <span class="text-danger" asp-validation-for="w_amount"></span>
+            </div>
+            <div class="form-group">
+                <label>창고위치</label>
+                <input type="text" class="form-control" asp-for="w_location" placeholder="창고위치  입력" />
+                <span class="text-danger" asp-validation-for="w_location"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">저장</button>
+                <a class="btn btn-warning" asp-controller="Products" asp-action="Index">취소</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+

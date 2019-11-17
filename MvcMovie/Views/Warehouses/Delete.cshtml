@@ -1,0 +1,46 @@
+﻿@model MvcMovie.Models.Warehouse
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>삭제하시겠습니까?</h3>
+<div>
+    <h4>Warehouse</h4>
+    <hr />
+    <dl class="row">
+        <
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.w_code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.w_code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.w_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.w_name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.w_amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.w_amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.w_location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.w_location)
+        </dd>
+    </dl>
+
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="w_code" />
+        <input type="submit" value="삭제" class="btn btn-danger" />
+        <a class="btn btn-warning" asp-controller="Products" asp-action="Index">취소</a>
+    </form>
+</div>

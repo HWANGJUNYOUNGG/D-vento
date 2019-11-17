@@ -1,0 +1,56 @@
+﻿@model MvcMovie.Models.Sell
+@{
+    ViewData["Title"] = "Create";
+}
+
+    <h1>Create</h1>
+
+<h4>Sell</h4>
+<hr />
+<div class="row">
+    <div class="col-lg-4"></div>
+    <div class="col-lg-4">
+        <form class="form-horizontal" method="post" asp-controller="Sells" asp-action="Create">
+            <div class="text-danger" asp-validation-summary="ModelOnly"></div>
+            <button type="button" class="btn btn-box-tool" data-widget="remove" data-toggle="tooltip" title="Remove">
+                <i class="fa fa-times"></i>
+            </button>
+            <div class="form-group">
+                <label>제품코드</label>
+                <input type="text" class="form-control" asp-for="s_code" placeholder="제품코드  입력" />
+                <span class="text-danger" asp-validation-for="s_code"></span>
+            </div>
+            <div class="form-group">
+                <label>제품명</label>
+                <input type="text" class="form-control" asp-for="s_name" placeholder="제품명  입력" />
+                <span class="text-danger" asp-validation-for="s_name"></span>
+            </div>
+            <div class="form-group">
+                <label>판매날짜</label>
+                <input type="text" class="form-control" asp-for="SellDate" placeholder="판매날짜  입력" />
+                <span class="text-danger" asp-validation-for="SellDate"></span>
+            </div>
+            <div class="form-group">
+                <label>수량</label>
+                <input type="text" class="form-control" asp-for="s_amount" placeholder="수량  입력" />
+                <span class="text-danger" asp-validation-for="s_amount"></span>
+            </div>
+            <div class="form-group">
+                <label>판매가격</label>
+                <input type="text" class="form-control" asp-for="Price" placeholder="판매가격  입력" />
+                <span class="text-danger" asp-validation-for="Price"></span>
+            </div>
+            <div class="form-group">
+                <label>마진율</label>
+                <input type="text" class="form-control" asp-for="Rating" placeholder="마진율  입력" />
+                <span class="text-danger" asp-validation-for="Rating"></span>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">저장</button>
+                <a class="btn btn-warning" asp-controller="Products" asp-action="Index">취소</a>
+            </div>
+        </form>
+    </div>
+    <div class="col-lg-4"></div>
+</div>
+

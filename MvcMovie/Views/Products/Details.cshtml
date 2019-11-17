@@ -1,0 +1,72 @@
+﻿@model MvcMovie.Models.Product
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Product</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p_code)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p_code)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p_name)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p_name)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p_measure)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p_measure)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p_many)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p_many)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p_location)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p_location)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p_comprice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p_comprice)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p_amount)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p_amount)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p_brandname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p_brandname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.p_customerprice)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.p_customerprice)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.p_code">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
